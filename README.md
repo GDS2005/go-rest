@@ -16,14 +16,13 @@ This is a simple Go REST API for performing CRUD operations on users. It uses th
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/my-go-rest.git
-    cd go-user-crud
+    git clone https://github.com/GDS2005/go-rest.git
+    cd go-rest
     ```
 
 2. **Set up your PostgreSQL database:**
 
     - Create a PostgreSQL database.
-    - Update the database connection details in the `configs/db.env` file.
 
 3. **Build and run the application:**
 
@@ -42,7 +41,7 @@ This is a simple Go REST API for performing CRUD operations on users. It uses th
 - `GET /users`: Get all users
 - `GET /users/{id}`: Get a user by ID
 - `POST /users`: Create a new user
-- `PUT /users/{id}`: Update a user by ID
+- `PATCH /users/{id}`: Update a user by ID
 - `DELETE /users/{id}`: Delete a user by ID
 
 ### Request Examples
