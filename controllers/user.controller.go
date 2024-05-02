@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"net/http"
 	"strconv" // Import strconv for type conversion
 
@@ -74,6 +75,7 @@ func CreateUser(c *gin.Context) {
 
 	// Create user using service
 	if err := userService.CreateUser(&newUser); err != nil {
+		fmt.Println("Error creating user:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
 		return
 	}

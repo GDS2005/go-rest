@@ -55,7 +55,7 @@ func (r *UserRepository) GetByID(id int) (*models.User, error) {
 // Create inserts a new user into the database
 func (r *UserRepository) Create(user *models.User) error {
 	// Execute SQL query to insert the new user
-	_, err := r.db.Exec("INSERT INTO users (id, username, email) VALUES ($1, $2, $3)", user.ID, user.Username, user.Email)
+	_, err := r.db.Exec("INSERT INTO users (username, email) VALUES ($1, $2)", user.Username, user.Email)
 	return err
 }
 
